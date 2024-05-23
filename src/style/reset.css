@@ -1,0 +1,22 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   line-height: normal;
+}
+
+a{
+   text-decoration: none !important;
+   display: inline-block;
+}
+
+*>img,
+*>video{
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+}

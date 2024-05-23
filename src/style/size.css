@@ -1,0 +1,17 @@
+.container-mega{
+   width: 80%;
+   margin: 0 auto;
+}
+.container{
+   width: 93%;
+   margin: auto;
+}
+.gap-50{
+   gap: 50px;
+}
+.gap-64{
+   gap: 64px;
+}
+.back-profil-logo{
+   height: 160px;
+}
