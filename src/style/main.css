@@ -1311,7 +1311,7 @@ canvas {
    content: "\e903";
 }
 
-.send-post-form-body_section {
+.send-post-form-body_section{
    padding: 20px;
    background: var(--white);
    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.07);
@@ -1698,7 +1698,7 @@ canvas {
    width: 100%;
 }
 
-.category_option.online .category-option_link {
+.category_option.online> .category-option_link {
    color: var(--red);
 }
 
@@ -1706,6 +1706,33 @@ canvas {
    display: flex;
    align-items: center;
    gap: 8px;
+}
+.ck.ck-editor__main>.ck-editor__editable.ck-focused,
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable){
+   height: 264px;
+   background: var(--disabled);
+   border: none;
+   outline: none;
+   border-radius: 0 0 12px 12px;
+}
+.ck.ck-editor__editable:not(.ck-editor__nested-editable)::-webkit-scrollbar{
+   display: none;
+}
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content, .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content.ck-rounded-corners{
+   border: none;
+   border-radius: 2px 2px 0 0;
+   /* padding: 5px; */
+}
+
+.ck.ck-toolbar>.ck-toolbar__items{
+   background: var(--disabled);
+   padding: 10px;
+   border-radius: 12px 12px 0 0;
+}
+.ck.ck-toolbar{
+   border: none !important;
+   padding: 0;
 }
 
 .order {
