@@ -1398,6 +1398,9 @@ canvas {
    content: "\e903";
    font-size: 17px;
 }
+input[type=file]{
+   display:none;
+}
 
 .send-post-media_section .inner-sidebar_lists {
    max-width: 100%;

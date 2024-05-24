@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import MainLayout from "../../layout/mainLayout/Index";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { useState } from "react";
 
 export default function ContactUs() {
+  const [file, setFile] = useState(null);
+  const handleFileChange=(e) => {
+    const selectedFile=e.target.files[0];
+    setFile(URL.createObjectURL(selectedFile));
+  }
   return (
     <MainLayout>
       <div className="page-name mt-20">
@@ -72,9 +78,7 @@ export default function ContactUs() {
                     Explanation
                   </label>
                   <div className="send-post-form-body_section sidebar">
-                    <CKEditor
-                      editor={ClassicEditor}
-                    />
+                    <CKEditor editor={ClassicEditor} />
                   </div>
                 </div>
                 <div className="send-post-media_head col-lg-2">
@@ -83,14 +87,25 @@ export default function ContactUs() {
                   </label>
                   <div className="send-media sidebar">
                     <div className="send-media_section sidebar">
-                      <p className="icon-insert_photo"></p>
-                      <p className="media-info">Drop image here, paste or</p>
-                      <button
-                        type="button"
-                        className="send-image_btn btn btn-small-row reply-btn "
-                      >
-                        Select
-                      </button>
+                      {file ? (
+                        <img src={file} alt="" />
+                      ) : (
+                        <>
+                          <p className="icon-insert_photo"></p>
+                          <p className="media-info">
+                            Drop image here, paste or
+                          </p>
+                          <label htmlFor="file" className="send-image_btn btn btn-small-row reply-btn">Select
+                            <input
+                              type="file"
+                              name="please select"
+                              className="send-image_btn btn btn-small-row reply-btn"
+                              id="file"
+                              onChange={handleFileChange}
+                            />
+                          </label>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
