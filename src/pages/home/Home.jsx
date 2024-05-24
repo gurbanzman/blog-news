@@ -11,6 +11,9 @@ import tech from "../../assets/images/popular-technology.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomSwiper from "../../components/swiper/Swiper";
+import Featured from "../../components/ui/Featured";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Controller, Navigation, EffectFade, Autoplay } from "swiper/modules";
 
 export default function Home() {
   // SwiperCore.use([Navigation,Pagination]);
@@ -21,6 +24,7 @@ export default function Home() {
       header: "Opening Day of Boating Season, Seattle WA",
       desc: "Of course the Puget Sound is very watery, and where there is water, there are boats. Today is the Grand Opening of Boating Season when traffic gets stalled in the University District (UW) while the Montlake Bridge",
       userImg: avatar,
+      name: "James",
       date: "August 18 , 2022",
       col: "col-lg-12",
     },
@@ -30,6 +34,7 @@ export default function Home() {
       header: "How to choose the right laptop for programming",
       desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
       userImg: avatar,
+      name: "James",
       date: "July 25 , 2022",
       col: "col-lg-12",
     },
@@ -39,6 +44,47 @@ export default function Home() {
       header: "How to choose the right laptop for programming",
       desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
       userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "4",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "5",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "6",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "7",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
       date: "July 25 , 2022",
       col: "col-lg-12",
     },
@@ -137,13 +183,124 @@ export default function Home() {
       imgUrl: food,
     },
   ]);
+  const [newPost, setNewPost] = useState([
+    {
+      id: "1",
+      imgUrl: sportGirl,
+      header: "Opening Day of Boating Season, Seattle WA",
+      desc: "Of course the Puget Sound is very watery, and where there is water, there are boats. Today is the Grand Opening of Boating Season when traffic gets stalled in the University District (UW) while the Montlake Bridge",
+      userImg: avatar,
+      name: "James",
+      date: "August 18 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "2",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "3",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "4",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "5",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "6",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+    {
+      id: "7",
+      imgUrl: tech,
+      header: "How to choose the right laptop for programming",
+      desc: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
+      userImg: avatar,
+      name: "James",
+      date: "July 25 , 2022",
+      col: "col-lg-12",
+    },
+  ]);
+  const [featured, setFeatured] = useState([
+    {
+      id: "1",
+      link: "/",
+      imgUrl: computer,
+      header: "Why I Stopped Using Multiple Monitor",
+      desc: "A Single Monitor Manifesto — Many developers believe multiple monitors improve productivity. Studies have proven it, right? Well, keep in mind, many of those studies are commissioned from monitor manufacturers like",
+    },
+    {
+      id: "2",
+      link: "/",
+      imgUrl: bmwPng,
+      header: "Why I Stopped Using Multiple Monitor",
+      desc: "A Single Monitor Manifesto — Many developers believe multiple monitors improve productivity. Studies have proven it, right? Well, keep in mind, many of those studies are commissioned from monitor manufacturers like",
+    },
+    {
+      id: "3",
+      link: "/",
+      imgUrl: computer,
+      header: "Why I Stopped Using Multiple Monitor",
+      desc: "A Single Monitor Manifesto — Many developers believe multiple monitors improve productivity. Studies have proven it, right? Well, keep in mind, many of those studies are commissioned from monitor manufacturers like",
+    },
+    {
+      id: "4",
+      link: "/",
+      imgUrl: computer,
+      header: "Why I Stopped Using Multiple Monitor",
+      desc: "A Single Monitor Manifesto — Many developers believe multiple monitors improve productivity. Studies have proven it, right? Well, keep in mind, many of those studies are commissioned from monitor manufacturers like",
+    },
+  ]);
   const [categorySwiper, setCategorySwiper] = useState(null);
   const [postSwiper, setPostSwiper] = useState(null);
-  function next(){
-    postSwiper.slideNext()
+  const [newPostSwiper, setNewPostSwiper] = useState(null);
+  let [isPrevDisabled, setIsPrevDisabled] = useState(true);
+  let [isNextDisabled, setIsNextDisabled] = useState(false);
+  function next(state) {
+    state.slideNext();
+    setButtonStates(state);
   }
-  function prev(){
-    postSwiper.slidePrev()
+  function prev(state) {
+    state.slidePrev();
+    setButtonStates(state);
+  }
+  function setButtonStates(swiper) {
+    setIsPrevDisabled(swiper.isBeginning);
+    setIsNextDisabled(swiper.isEnd);
   }
   return (
     <MainLayout>
@@ -171,72 +328,58 @@ export default function Home() {
 
       <header className="header">
         <div className="header-section container-mega d-flex gap-4">
-          <div className="col-lg-3 section-cart_head">
-            <div className="header-section_cart position-relative">
-              <div className="header-cart position-absolute">
-                <Link className="header-cart_title">
-                  How to Make Dance Music
-                </Link>
-                <p className="header-cart_subtitle">
-                  Download torrents from verified or trusted uploaders. If
-                  you're a BitTorrent user looking for safety tips, use this
-                  method. Both of the big-name BitTorrent indexers (The Pirate
-                  Bay and KickAssTorrents) use symbols to highlight torrents
-                  uploaded by verified users.
-                </p>
-              </div>
-              <div className="header-section_logo">
-                <img src={bmwPng} alt="bmw.png" className="b-12" />
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 section-cart_head">
-            <div className="header-section_cart position-relative">
-              <div className="header-cart position-absolute">
-                <Link className="header-cart_title">
-                  How to Make Dance Music
-                </Link>
-                <p className="header-cart_subtitle">
-                  Download torrents from verified or trusted uploaders. If
-                  you're a BitTorrent user looking for safety tips, use this
-                  method. Both of the big-name BitTorrent indexers (The Pirate
-                  Bay and KickAssTorrents) use symbols to highlight torrents
-                  uploaded by verified users.
-                </p>
-              </div>
-              <div className="header-section_logo">
-                <img src={girlPng} alt="girl.png" className="b-12" />
-              </div>
-            </div>
-          </div>
+          <Featured
+            link={`/`}
+            header={`How to Drive a Car Safely`}
+            desc={`Ah, the joy of the open road—it’s a good feeling. But if you’re new to driving, you may feel a little nervous about getting behind the wheel. Don’t worry. While it’s true that accidents can happen to anybody, there are things you can do to drive safely and do your best to avoid them. `}
+            imgUrl={bmwPng}
+          />
+          <Featured
+            link={`/`}
+            header={`How to Make Dance Music`}
+            desc={`Download torrents from verified or trusted uploaders. If you're a BitTorrent user looking for safety tips, use this method. Both of the big-name BitTorrent indexers (The Pirate Bay and KickAssTorrents) use symbols to highlight torrents uploaded by verified users. `}
+            imgUrl={girlPng}
+          />
           <div className="col-lg-6 section-cart_head">
             <div className="section-cart_block position-relative">
-              <div
-                className="carts-block slider-block"
-                data-slick="sliders1"
-                data-slick-show="1"
-                data-slick-auto="true"
-                data-slick-auto-speed="1000"
-                data-slick-dots="true"
-                data-slick-infinite="false"
-              >
-                <div className="header-section_cart position-relative">
-                  <div className="header-cart position-absolute width-97">
-                    <Link className="header-cart_title">
-                      How to Make Dance Music
-                    </Link>
-                    <p className="header-cart_subtitle">
-                      Download torrents from verified or trusted uploaders. If
-                      you are a BitTorrent user looking for safety tips, use
-                      this method. Both of the big-name BitTorrent indexers (The
-                      Pirate Bay and KickAssTorrents) use symbols to highlight
-                      torrents uploaded by verified users.
-                    </p>
-                  </div>
-                  <div className="header-section_logo">
-                    <img src={computer} alt="girl.png" className="b-12" />
-                  </div>
-                </div>
+              <div className="carts-block slider-block">
+                <Swiper
+                  modules={[Controller, Navigation, EffectFade,Autoplay]}
+                  spaceBetween={30}
+                  slidesPerView={1}
+                  slidesPerGroup={1}
+                  navigation={false}
+                  controller={{ control: true }}
+                  effect="fade"
+                  fadeEffect={{ crossFade: true }}
+                  speed={2000}
+                  autoplay={{
+                    delay: 3000, // 3000ms (3 saniye) beklemeden sonra otomatik geçiş
+                    disableOnInteraction: true,
+                  }}
+                >
+                  {featured.map((item, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <div className="header-section_cart position-relative">
+                          <div className="header-cart position-absolute width-97">
+                            <Link to={item.link} className="header-cart_title">
+                              {item.header}
+                            </Link>
+                            <p className="header-cart_subtitle">{item.desc}</p>
+                          </div>
+                          <div className="header-section_logo">
+                            <img
+                              src={item.imgUrl}
+                              alt="girl.png"
+                              className="b-12"
+                            />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
               </div>
 
               <div className="header-section-btn" data-btn-slick="sliders1">
@@ -259,14 +402,16 @@ export default function Home() {
                 <button
                   type="button"
                   className="prev-btn btn sidebar btn--slick"
-                  onClick={prev}
+                  onClick={() => prev(postSwiper)}
+                  disabled={isPrevDisabled == true ? true : false}
                 >
                   {" "}
                 </button>
                 <button
                   type="button"
                   className="next-btn btn sidebar btn--slick"
-                  onClick={next}
+                  onClick={() => next(postSwiper)}
+                  disabled={isNextDisabled == true ? true : false}
                 >
                   {" "}
                 </button>
@@ -291,7 +436,7 @@ export default function Home() {
                   swiperController={postSwiper}
                   setSwiperController={setPostSwiper}
                   between={30}
-                  view={2}
+                  view={4}
                   navigation={false}
                 />
               </div>
@@ -342,150 +487,30 @@ export default function Home() {
                 <button
                   type="button"
                   className="prev-btn btn sidebar btn--slick"
+                  onClick={() => prev(newPostSwiper)}
                 >
                   {" "}
                 </button>
                 <button
                   type="button"
                   className="next-btn btn sidebar btn--slick"
+                  onClick={() => next(newPostSwiper)}
                 >
                   {" "}
                 </button>
               </div>
             </div>
             <div className="post-main_body">
-              <div
-                className="post-main_carts  post-main--carts slider-block "
-                data-slick="sliders3"
-                data-slick-show="4"
-                data-slick-auto="true"
-                data-slick-auto-speed="1"
-                data-slick-dots="false"
-                data-slick-infinite="false"
-                data-responsive-slick-show="3"
-                data-tablet="2"
-                data-mobile="1"
-              >
-                <div className="post-main_cart col-lg-3">
-                  <div className="post-cart_logo">
-                    <img
-                      src={sportGirl}
-                      alt="sport-girl.png"
-                      className="b-12"
-                    />
-                  </div>
-                  <div className="post-cart_body">
-                    <div className="post-cart_text">
-                      <a className="post-cart_title">
-                        Opening Day of Boating Season, Seattle WA
-                      </a>
-                      <p className="post-cart_subtitle">
-                        Of course the Puget Sound is very watery, and where
-                        there is water, there are boats. Today is the Grand
-                        Opening of Boating Season when traffic gets stalled in
-                        the University District (UW) while the Montlake Bridge
-                      </p>
-                    </div>
-                    <div className="post-cart_user">
-                      <div className="post-user_info">
-                        <div className="post-user_logo">
-                          <img src={avatar} alt="avatar.png" className="b-12" />
-                        </div>
-                        <ul className="post-user_desc">
-                          <li className="post-user_name">James</li>
-                          <li className="post-user_date">August 18 , 2022</li>
-                        </ul>
-                      </div>
-                      <p className="post-user_book">
-                        <input
-                          type="checkbox"
-                          name="check"
-                          className="post-user-book_check"
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-main_cart col-lg-3">
-                  <div className="post-cart_logo">
-                    <img
-                      src={sportGirl}
-                      alt="sport-girl.png"
-                      className="b-12"
-                    />
-                  </div>
-                  <div className="post-cart_body">
-                    <div className="post-cart_text">
-                      <a className="post-cart_title">
-                        Opening Day of Boating Season, Seattle WA
-                      </a>
-                      <p className="post-cart_subtitle">
-                        Of course the Puget Sound is very watery, and where
-                        there is water, there are boats. Today is the Grand
-                        Opening of Boating Season when traffic gets stalled in
-                        the University District (UW) while the Montlake Bridge
-                      </p>
-                    </div>
-                    <div className="post-cart_user">
-                      <div className="post-user_info">
-                        <div className="post-user_logo">
-                          <img src={avatar} alt="avatar.png" className="b-12" />
-                        </div>
-                        <ul className="post-user_desc">
-                          <li className="post-user_name">James</li>
-                          <li className="post-user_date">August 18 , 2022</li>
-                        </ul>
-                      </div>
-                      <p className="post-user_book">
-                        <input
-                          type="checkbox"
-                          name="check"
-                          className="post-user-book_check"
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-main_cart col-lg-3">
-                  <div className="post-cart_logo">
-                    <img
-                      src={sportGirl}
-                      alt="sport-girl.png"
-                      className="b-12"
-                    />
-                  </div>
-                  <div className="post-cart_body">
-                    <div className="post-cart_text">
-                      <a className="post-cart_title">
-                        Opening Day of Boating Season, Seattle WA
-                      </a>
-                      <p className="post-cart_subtitle">
-                        Of course the Puget Sound is very watery, and where
-                        there is water, there are boats. Today is the Grand
-                        Opening of Boating Season when traffic gets stalled in
-                        the University District (UW) while the Montlake Bridge
-                      </p>
-                    </div>
-                    <div className="post-cart_user">
-                      <div className="post-user_info">
-                        <div className="post-user_logo">
-                          <img src={avatar} alt="avatar.png" className="b-12" />
-                        </div>
-                        <ul className="post-user_desc">
-                          <li className="post-user_name">James</li>
-                          <li className="post-user_date">August 18 , 2022</li>
-                        </ul>
-                      </div>
-                      <p className="post-user_book">
-                        <input
-                          type="checkbox"
-                          name="check"
-                          className="post-user-book_check"
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="post-main_carts  post-main--carts slider-block ">
+                <CustomSwiper
+                  data={newPost}
+                  type="newPost"
+                  swiperController={newPostSwiper}
+                  setSwiperController={setNewPostSwiper}
+                  between={30}
+                  view={4}
+                  navigation={false}
+                />
               </div>
             </div>
           </div>

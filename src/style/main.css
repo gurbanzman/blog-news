@@ -261,7 +261,10 @@ canvas {
    color: var(--black-1);
 }
 .swiper-slide{
-   width: 30% !important;
+   width: 23% !important;
+}
+.header-section .swiper-slide{
+   width: 100% !important;
 }
 
 .section-search_title::after {
@@ -520,10 +523,12 @@ canvas {
    border-radius: 12px;
    background: var(--white);
    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.07);
-   /* margin-right: 20px;
-   margin-left: 5px; */
+   margin-left: 5px;
 }
-
+.btn--slick:disabled{
+   opacity: 0.3;
+   cursor: no-drop;
+}
 .post-cart_subtitle {
    overflow: hidden;
    color: var(--black-8);
