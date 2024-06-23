@@ -88,7 +88,7 @@ export default function ContactUs() {
                   <div className="send-media sidebar">
                     <div className="send-media_section sidebar">
                       {file ? (
-                        <img src={file} alt="" />
+                        <img src={file} alt="" className="send--image"/>
                       ) : (
                         <>
                           <p className="icon-insert_photo"></p>

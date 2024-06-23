@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Cart({imgUrl,header,desc,userImg,userName,date,col}) {
+export default function Cart({imgUrl,link,header,desc,userImg,userName,date,col}) {
   return (
     <div className={`post-main_cart ${col}`}>
       <div className="post-cart_logo">
@@ -8,7 +8,7 @@ export default function Cart({imgUrl,header,desc,userImg,userName,date,col}) {
       </div>
       <div className="post-cart_body">
         <div className="post-cart_text">
-          <Link className="post-cart_title">
+          <Link to={link} className="post-cart_title">
             {header}
           </Link>
           <p className="post-cart_subtitle">

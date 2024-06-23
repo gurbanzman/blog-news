@@ -121,7 +121,7 @@ canvas {
 }
 
 .col-lg-12 {
-   width: 100%;
+   width: 100% !important;
 }
 
 .cursor-pointer {
@@ -1398,9 +1398,6 @@ canvas {
    content: "\e903";
    font-size: 17px;
 }
-input[type=file]{
-   display:none;
-}
 
 .send-post-media_section .inner-sidebar_lists {
    max-width: 100%;
@@ -1575,6 +1572,9 @@ input[type=file]{
    left: 0;
    width: 100%;
    height: 100%;
+   object-fit: contain;
+}
+.send--image{
    object-fit: contain;
 }
 
@@ -1851,6 +1851,51 @@ input[type=file]{
    width: 100%;
 }
 
+.sign-main-form_section{
+   margin-top: 20px;
+}
+
+.sign-main-form_input{
+   border: 1px solid #e5e5e5;
+   padding: 10px;
+   border-radius: 8px;
+}
+
+.sign-main-form_btn{
+   margin-top: 40px;
+}
+
+.sign-main-form_btn>button{
+   width: 100%;
+   padding: 10px 0;
+}
+
+.sign-main_title{
+   font-size: 32px;
+   text-align: center;
+   color: var(--black-8);
+}
+.sign-main-form-var{
+   margin-top: 15px;
+}
+.sign-firebase-auth-btn{
+   padding: 10px 0;
+   cursor: pointer;
+   background: none;
+   outline: none;
+   border: none;
+   border: 1px solid var(--black-3);
+   border-radius: 8px;
+   font-size: 16px;
+   transition: all 0.2s ease;
+}
+.sign-firebase-auth-btn:hover{
+   background: var(--disabled);
+}
+.sign-firebase-auth-btn > svg {
+   position: absolute;
+   left: 10px;
+}
 @media screen and (max-width:1805px) {
    .edit-form {
       gap: 27px;
@@ -2081,6 +2126,9 @@ input[type=file]{
    .post--comment {
       width: 100%;
    }
+   .swiper-slide{
+      width: 30% !important;
+   }
 }
 
 @media screen and (max-width:1374px) {
@@ -2224,8 +2272,8 @@ input[type=file]{
    }
 
    .bar>.bar-line.open~.navbar-pages>.navbar-pages_list:first-of-type:hover .categories-pages_list {
-      left: 9rem;
-      top: 5px;
+      left: 10rem;
+      top: 73px;
    }
 
    .bar>.bar-line.open~.navbar-pages>.navbar-pages_list:last-of-type {
@@ -2236,10 +2284,22 @@ input[type=file]{
    .bar>.bar-line.open~.navbar-pages>.navbar-pages_list:last-of-type>a {
       font-size: 19px;
    }
+   .swiper-slide{
+      width: 40% !important;
+   }
 }
 
 .bar-line .navbar-pages_list:last-of-type {
    display: none;
+}
+
+.sign-main_section{
+  width: 50%;
+  margin: 7rem auto;
+  background: var(--white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 12px;
+  padding: 12px;
 }
 
 
@@ -2359,6 +2419,9 @@ input[type=file]{
    .loading-window{
       width: 90%;
    }
+   .swiper-slide{
+      width: 50% !important;
+   }
 }
 
 @media screen and (max-width:880px) {
@@ -2399,6 +2462,9 @@ input[type=file]{
       align-items: flex-start;
       gap: 20px;
       padding: 14px;
+   }
+   .swiper-slide{
+      width: 100% !important;
    }
 }
 

@@ -30,7 +30,9 @@
 .post-degree,
 .post-degree_block,
 .about-header_media,
-.loading-section{
+.loading-section,
+.sign-main-form_btn > button,
+.sign-firebase-auth-btn{
    display: flex;
    align-items: center;
    justify-content: center;
@@ -46,7 +48,9 @@
 .send-post-media_head,
 .post-degree_option,
 .post-satisfaction_list,
-.add-banner{
+.add-banner,
+.sign-main-form_section,
+.sign-firebase{
    display: flex;
    flex-direction: column;
    gap: 15px;
@@ -129,7 +133,10 @@
 .mega-news_notifi,
 .category-option_link,
 .post-cart-pagi_link,
-.inner-main-info_list a {
+.inner-main-info_list a,
+.sign-main-form_title,
+.sign-main-form_btn > button,
+.sign-main_title {
    color: var(--black);
    font-size: 16px;
    text-transform: capitalize;

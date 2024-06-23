@@ -22,6 +22,27 @@ export default function CustomSwiper({
       slidesPerGroup={1}
       navigation={navigation}
       controller={{ control: swiperController }}
+      breakpoints={{
+        1805: {
+          slidesPerView: 4,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        768: {
+          slidesPerView: 1,
+        },
+        425: {
+          slidesPerView: 1,
+        },
+        335: {
+          slidesPerView: 1,
+        },
+      }}
     >
       {type === "category"
         ? data?.map((item, index) => (
@@ -39,6 +60,7 @@ export default function CustomSwiper({
               <Cart
                 key={index}
                 imgUrl={item.imgUrl}
+                link={item.link}
                 header={item.header}
                 desc={item.desc}
                 userImg={item.userImg}
@@ -54,11 +76,28 @@ export default function CustomSwiper({
               <Cart
                 key={index}
                 imgUrl={item.imgUrl}
+                link={item.link}
                 header={item.header}
                 desc={item.desc}
                 userImg={item.userImg}
                 date={item.date}
                 userName={item.name}
+                col={item.col}
+              />
+            </SwiperSlide>
+          ))
+        : type === "relatedPost"
+        ? data?.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Cart
+                key={index}
+                imgUrl={item.imgUrl}
+                link={item.link}
+                header={item.header}
+                desc={item.desc}
+                userImg={item.userImg}
+                date={item.date}
+                userName={item.userName}
                 col={item.col}
               />
             </SwiperSlide>

@@ -11,37 +11,37 @@ export default function Navbar() {
       subMenu: [
         {
           id: "1",
-          link: "/category/:name",
+          link: "/category/name",
           name: "sport",
         },
         {
           id: "2",
-          link: "/category/:name",
+          link: "/category/name",
           name: "food",
         },
         {
           id: "3",
-          link: "/category/:name",
+          link: "/category/name",
           name: "animal",
         },
         {
           id: "4",
-          link: "/category/:name",
+          link: "/category/name",
           name: "car",
         },
         {
           id: "5",
-          link: "/category/:name",
+          link: "/category/name",
           name: "music",
         },
         {
           id: "6",
-          link: "/category/:name",
+          link: "/category/name",
           name: "technology",
         },
         {
           id: "7",
-          link: "/category/:name",
+          link: "/category/name",
           name: "abstract",
         },
       ],
@@ -86,12 +86,12 @@ export default function Navbar() {
           <div className="bar">
             <input type="checkbox" name="check" className="bar-line" />
             <input type="checkbox" name="check" className="bar-close" />
-            <ul className="navbar-pages">
+            <ul className="navbar-pages position-relative">
               {menu.map((item, index) => {
                 return (
                   <li
                     key={index}
-                    className="navbar-pages_list position-relative"
+                    className="navbar-pages_list"
                   >
                     <Link to={item.to} className="navbar-pages_name btn">
                       {item.name}{" "}
@@ -129,37 +129,37 @@ export default function Navbar() {
               </Link>
               <ul className="categories-pages_list sidebar">
                 <li className="categories-pages_block">
-                  <Link to="/category/:sport" className="categories-pages">
+                  <Link to="/category/sport" className="categories-pages">
                     Sport
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:food" className="categories-pages">
+                  <Link to="/category/food" className="categories-pages">
                     Food
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:animal" className="categories-pages">
+                  <Link to="/category/animal" className="categories-pages">
                     Animal
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:car" className="categories-pages">
+                  <Link to="/category/car" className="categories-pages">
                     Car
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:music" className="categories-pages">
+                  <Link to="/category/music" className="categories-pages">
                     Music
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:technology" className="categories-pages">
+                  <Link to="/category/technology" className="categories-pages">
                     Technology
                   </Link>
                 </li>
                 <li className="categories-pages_block">
-                  <Link to="/category/:abstract" className="categories-pages">
+                  <Link to="/category/abstract" className="categories-pages">
                     Abstract
                   </Link>
                 </li>

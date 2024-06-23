@@ -10,23 +10,28 @@ import AboutUs from "./pages/about-us/AboutUs";
 import InnerCategory from "./pages/category/InnerCategory";
 import InnerPost from "./pages/innerPost/InnerPost";
 import UserProfile from "./pages/user-profile/UserProfile";
+import SignUp from "./pages/sign-up/page";
+import Register from "./pages/register/page";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/post/:slug" element={<InnerPost />} />
-        <Route path="/post/create" element={<CreatePost />} />
+        <Route path="/posts/:slug" element={<InnerPost />} />
 
-        <Route path="/profile/:user" element={<UserProfile />} />
-        <Route path="/profile/:user/marked" element={<Marked />} />
-        <Route path="/profile/:user/posts" element={<Posts />} />
-        <Route path="/profile/:user/edit/:id" element={<EditProfile />} />
+        <Route path="/profile/:user/:token" element={<UserProfile />} />
+        <Route path="/home/:user/:id" element={<Marked />} />
+        <Route path="/:user/posts/:id" element={<Posts />} />
+        <Route path="/:user/edit/:id" element={<EditProfile />} />
+        <Route path="/:user/create/:id" element={<CreatePost />} />
 
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/category/:name" element={<InnerCategory />} />
+
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/register" element={<Register />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
