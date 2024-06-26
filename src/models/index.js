@@ -24,8 +24,7 @@ const PostSchema = new mongoose.Schema({
   },
   id: {
     type: String,
-    default: nanoid(),
-    unique: true,
+    default: nanoid()
   }
 }, { timestamps: true });
 

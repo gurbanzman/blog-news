@@ -157,14 +157,14 @@ export default function CreatePost() {
               </ul>
             </div>
             <ul className="inner-main_info" id="main-info-marked">
-              <li className="inner-main-info_list">
-                <Link to="profile-marked.html">Marked</Link>
+            <li className="inner-main-info_list">
+                <Link to={`/home/${find.fname}/${find.id}`}>Marked</Link>
               </li>
-              <li className="post-main_head inner-main-info_list">
-                <Link to="profile-send-post.html">Send Post</Link>
+              <li className="inner-main-info_list post-main_head">
+                <Link to={`/${find.fname}/create/${find.id}`}>Send Post</Link>
               </li>
               <li className="inner-main-info_list">
-                <Link to="profile-posts.html">Posts</Link>
+                <Link to={`/${find.fname}/posts/${find.id}`}>Posts</Link>
               </li>
             </ul>
             <div className="inner-header_btn">

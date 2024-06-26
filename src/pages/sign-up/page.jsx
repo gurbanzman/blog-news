@@ -47,9 +47,11 @@ export default function SignUp() {
       setFind(findByEmail(values.email))
       if(Object.values(find).length > 0){
         setLoading(true)
+        localStorage.setItem('register',true);
       }
       else{
         setLoading(false);
+        localStorage.setItem('register',false);
       }
     } catch (error) {
       console.error(error);
@@ -98,7 +100,7 @@ export default function SignUp() {
       <main className="sign-main">
         <section className="sign-main_section">
           <h1 className="sign-main_title">Sign Up</h1>
-          <form className="sign-main_form">
+          <form className="sign-main_form" onSubmit={updateValues}>
             <div className="sign-main-form_section">
               <label htmlFor="email" className="sign-main-form_title">
                 Email
@@ -127,7 +129,7 @@ export default function SignUp() {
               <button
                 type="submit"
                 className="btn btn-small-row sidebar"
-                onClick={updateValues}
+                onSubmit={updateValues}
               >
                 Submit
               </button>
